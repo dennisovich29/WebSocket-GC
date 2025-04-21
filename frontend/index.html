@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Chat App</title>
+    <script src = "https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-cover bg-center" style="background-image: url('./assets/bg.jpg');">
+    <div class="min-h-screen flex items-center justify-center">
+
+        <!-- Join Screen -->
+        <div id="join-screen" class="w-full max-w-md p-6 bg-white rounded-xl shadow-lg">
+            <h1 class="text-2xl font-bold mb-4">Join Chat Room</h1>
+            <input id="username" type="text" placeholder="Enter your name" class="w-full p-2 mb-3 border rounded"/>
+            <input id="room" type="text" placeholder="Enter room name" class="w-full p-2 mb-3 border rounded"/>
+            <button id="join-btn" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded">Join</button>
+        </div>
+
+        <!-- Chat Screen -->
+        <div id="chat-screen" class="hidden flex flex-col w-full max-w-2xl h-[80vh] p-6 bg-white rounded-xl shadow-lg">
+            <div class="flex justify-between items-center mb-2">
+                <h2 class="text-xl font-bold">Room: <span id="room-name"></span></h2>
+                <div id="typing-indicator" class="text-sm text-gray-400 hidden">Someone is typing...</div>
+            </div>
+            <div id="chat-box" class="flex-1 overflow-y-auto border p-3 mb-4 rounded bg-gray-50 space-y-2"></div>
+
+            <div class="flex gap-2">
+                <input id="message-input" type="text" placeholder="Type a message..." class="flex-1 border p-2 rounded"/>
+                <button id="send-btn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded">Send</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="chat.js"></script>
+</html>
