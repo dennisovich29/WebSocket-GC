@@ -24,35 +24,21 @@ Database: MongoDB
 Setup Instructions
 Clone the repository:
 
-bash
-Copy
-Edit
-git clone https://github.com/<your-username>/WebScoket-GC.git
+git clone https://github.com/dennisovich29/WebScoket-GC.git
 cd WebScoket-GC
+
 Install dependencies:
-
-nginx
-Copy
-Edit
 npm install
+
 Create a .env file in the root directory and add:
-
-ini
-Copy
-Edit
 MONGO_URI=mongodb://localhost:27017/GroupChat
+
 Start the MongoDB server (if using Homebrew):
-
-sql
-Copy
-Edit
 brew services start mongodb-community
-Run the server:
 
-nginx
-Copy
-Edit
+Run the server:
 node server.js
+
 Open index.html in your browser to use the app.
 
 To Do
